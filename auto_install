@@ -1,0 +1,15 @@
+#!/usr/bin/expect -f
+ 
+set timeout -1
+
+spawn ./install_sgx.sh
+
+expect -exact {Do you want to install in current directory? [yes/no] : }
+ 
+send -- "no\r"
+ 
+expect  -exact {Please input the directory which you want to install in : }
+ 
+send -- "/opt/intel/\r"
+ 
+expect eof
