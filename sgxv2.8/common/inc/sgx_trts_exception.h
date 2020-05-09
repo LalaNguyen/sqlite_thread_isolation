@@ -141,11 +141,15 @@ void * SGXAPI sgx_register_exception_handler(int is_first_handler, sgx_exception
 int SGXAPI sgx_unregister_exception_handler(void *handler);
 
 
+/* Terminus APIs */
 void * SGXAPI sgx_register_meta_storage(uint8_t *storage);
 void * SGXAPI sgx_register_seal_key(uint8_t *cfi_key);
 void * SGXAPI sgx_register_agent_status(void *status);
 void * SGXAPI sgx_register_return_stack_storage(uint8_t *storage);
 void * SGXAPI sgx_register_ssas_storage(uint8_t *storage);
+void * SGXAPI sgx_register_private_data_storage(uint8_t *storage);
+void * SGXAPI sgx_register_private_mem(uint8_t *p,  uint32_t size, uint8_t *config, uint32_t lookaside_config_size);
+void * SGXAPI sgx_snapshot_private_mem(uint8_t *p);
 
 #ifdef __cplusplus
 }

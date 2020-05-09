@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
+CMAKE_SOURCE_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
+CMAKE_BINARY_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qpl/CMakeFiles/progress.marks
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles 0
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qpl/CMakeFiles/progress.marks
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/clean
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/preinstall
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/preinstall
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 qpl/CMakeFiles/dcap_quoteprov.dir/rule:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/CMakeFiles/dcap_quoteprov.dir/rule
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qpl/CMakeFiles/dcap_quoteprov.dir/rule
 .PHONY : qpl/CMakeFiles/dcap_quoteprov.dir/rule
 
 # Convenience name for target.
@@ -122,35 +122,35 @@ dcap_quoteprov: qpl/CMakeFiles/dcap_quoteprov.dir/rule
 
 # fast build rule for target.
 dcap_quoteprov/fast:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qpl/CMakeFiles/dcap_quoteprov.dir/build.make qpl/CMakeFiles/dcap_quoteprov.dir/build
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qpl/CMakeFiles/dcap_quoteprov.dir/build.make qpl/CMakeFiles/dcap_quoteprov.dir/build
 .PHONY : dcap_quoteprov/fast
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.o
 
 # target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qpl/CMakeFiles/dcap_quoteprov.dir/build.make qpl/CMakeFiles/dcap_quoteprov.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qpl/CMakeFiles/dcap_quoteprov.dir/build.make qpl/CMakeFiles/dcap_quoteprov.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.i
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.i
 
 # target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qpl/CMakeFiles/dcap_quoteprov.dir/build.make qpl/CMakeFiles/dcap_quoteprov.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qpl/CMakeFiles/dcap_quoteprov.dir/build.make qpl/CMakeFiles/dcap_quoteprov.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.i
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.s
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.s
 
 # target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qpl/CMakeFiles/dcap_quoteprov.dir/build.make qpl/CMakeFiles/dcap_quoteprov.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qpl/CMakeFiles/dcap_quoteprov.dir/build.make qpl/CMakeFiles/dcap_quoteprov.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... dcap_quoteprov"
 	@echo "... edit_cache"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.s"
 .PHONY : help
 
 
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

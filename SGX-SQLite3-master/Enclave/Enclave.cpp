@@ -1,8 +1,15 @@
 #include "Enclave_t.h"
-#include "sqlite3.h"
 #include <string>
-#include "sgx_thread.h"
-static sgx_thread_mutex_t global_mutex = SGX_THREAD_MUTEX_INITIALIZER;
+#include <stdio.h> /* vsnprintf */
+#include <stdarg.h>
+#include "sgx_tseal.h"
+#include "sgx_trts.h"
+#include "sgx_trts_exception.h"
+#include "agent_meta.h"
+#include "sqlite3.h"
+
+static enclave_thread_dbg *e1 = ( enclave_thread_dbg *)malloc(sizeof(enclave_thread_dbg));
+static void * g_lks_buffer = NULL;
 
 #ifndef uint32
 #  define uint32 unsigned int
@@ -287,27 +294,27 @@ static void md5finalize(sqlite3_context *context){
 
 static sqlite3* db;  // Database connection object
 
-// SQLite callback function for printing results
-static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
-  int i;
-  for(i = 0; i < argc; i++){
-    std::string azColName_str = azColName[i];
-    std::string argv_str = (argv[i] ? argv[i] : "NULL");
-    ocall_print_string((azColName_str + " = " + argv_str + "\n").c_str());
-  }
-  ocall_print_string("\n");
-  return 0;
+int my_printf(long my_tid, const char* fmt, ...)
+{
+    char buf[BUFSIZ] = { '\0' };
+    va_list ap;
+    va_start(ap, fmt);
+    vsnprintf(buf, BUFSIZ, fmt, ap);
+    va_end(ap);
+    ocall_my_print_string(my_tid, buf);
+    return (int)strnlen(buf, BUFSIZ - 1) + 1;
 }
 
-static int authorizer(void* udp, int action_code,
-                     const char* param1,  const char* param2,
-                     const char* db_name, const char* trigger_name)
-{
-  if(action_code == SQLITE_DELETE)
-  {
-    return SQLITE_DENY;
+//SQLite callback function for printing results
+static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
+  int i;
+  for(i = 0; i < 1; i++){
+    std::string azColName_str = azColName[i];
+    std::string argv_str = (argv[i] ? argv[i] : "NULL");
+    my_printf(0,(azColName_str + " = " + argv_str + "\n").c_str());
   }
-  return SQLITE_OK ;
+  my_printf(0,"\n");
+  return 0;
 }
 
 static int busyhandler(void *pArg, int n){
@@ -319,36 +326,83 @@ static int busyhandler(void *pArg, int n){
   return 0;
 }
 
-void ecall_opendb() {
-  int rc = sqlite3_open(":memory:", &db);  // Opening In-Memory database
-  /* Register the authorizer function */  
-  sqlite3_set_authorizer(db, authorizer, NULL);   
+
+
+sgx_status_t ecall_init_AGENTS(   uint8_t *heap_storage,
+                            uint8_t *cfi_key, uint8_t *meta_storage, 
+                            void *agent_status, uint8_t *return_stack_storage, 
+                            uint8_t *ssas_storage,
+                            uint8_t *debug_pointer) 
+{
+  (void) heap_storage;
   
+  uint32_t ret = 0;   
+  /* Retrieve enclave info */
+  
+  if (sgx_is_within_enclave(cfi_key, KEYLEN) != 1)
+        abort();
+
+  /* Seal the CFI key*/
+  ret = sgx_seal_data(0, NULL, KEYLEN, (uint8_t*)cfi_key, SEALED_CFI_KEY_SIZE, (sgx_sealed_data_t *)sealed_cfi_key); 
+  assert(ret == SGX_SUCCESS);
+
+  sgx_register_seal_key(sealed_cfi_key);
+  sgx_register_meta_storage(meta_storage);
+  sgx_register_agent_status(agent_status);
+  sgx_register_return_stack_storage(return_stack_storage);
+  sgx_register_ssas_storage(ssas_storage);
+  sgx_register_private_data_storage(heap_storage); /* Agent uses heap storage to store sensitive data requested by program */
+
+  agent_info = (encl_thr_info*) agent_status;
+  e1 =  (enclave_thread_dbg *) debug_pointer;
+  return SGX_SUCCESS;
+}
+
+
+void ecall_opendb(long tid) {
+  int rc = sqlite3_open(":memory:", &db);  // Opening In-Memory database
+  uint8_t * lks_buffer = (uint8_t*) malloc(500*100); // size = 100 bytes * cnt = 500 slots
+  /* Register the our lookaside buffer memory */  
+  sqlite3_db_config(db, SQLITE_DBCONFIG_LOOKASIDE, lks_buffer, 100, 500);
+  uint8_t *lks_config_p = (uint8_t*) my_get_lookaside(db);
+  int size = my_get_lookaside_size();
+  sgx_register_private_mem(lks_buffer, 50000, lks_config_p, size);
+  g_lks_buffer = lks_buffer;
   if (rc) {
     ocall_println_string("[SQLite3 Error] - can't open database connection: ");
     ocall_println_string(sqlite3_errmsg(db));
     return;
   }
   sqlite3_create_function(db, "md5sum", -1, SQLITE_UTF8, 0, 0, md5step, md5finalize);
-  sqlite3_busy_handler(db, busyhandler, 0);
   sqlite3_exec(db, "PRAGMA synchronous=OFF", 0, 0, 0);
-  ocall_print_string("[SQLite3 Info] - Created database connection to :memory:");
+  sgx_snapshot_private_mem(lks_buffer);
+ /* Register the private memory to agent */
 }
 
-void ecall_execute_sql(const char *sql) {
+void ecall_terminus_execute_sql(long tid, const char *sql) {
   int rc;
   char *zErrMsg = NULL;
-  sgx_thread_mutex_lock(&global_mutex);
+  // sgx_thread_mutex_lock(&global_mutex);
+  // long *a  = (long*) my_sqlite3DbMallocRaw(db, 8);
+  // *a = tid;
+  rc = sqlite3_exec(db, sql, NULL, 0, &zErrMsg);
+  // sgx_thread_mutex_unlock(&global_mutex);
+}
+
+void ecall_execute_sql(long tid, const char *sql) {
+  int rc;
+  char *zErrMsg = NULL;
+  // sgx_thread_mutex_lock(&global_mutex);
   rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
   if (rc) {
     ocall_print_string("[SQLite3 error] - ");
     ocall_println_string(sqlite3_errmsg(db));
     return;
   }
-  sgx_thread_mutex_unlock(&global_mutex);
+  // sgx_thread_mutex_unlock(&global_mutex);
 }
 
-void ecall_closedb() {
+void ecall_closedb(long tid) {
   sqlite3_close(db);
   ocall_println_string("[SQLite3 Info] - Closed database connection");
 }

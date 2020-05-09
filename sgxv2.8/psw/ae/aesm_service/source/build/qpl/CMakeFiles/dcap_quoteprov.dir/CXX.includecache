@@ -22,7 +22,7 @@ sgx_ql_lib_common.h
 sgx_key.h
 ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/common/inc/sgx_key.h
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp
 string
 -
 stdio.h
@@ -32,11 +32,11 @@ stdlib.h
 limits.h
 -
 se_memcpy.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/se_memcpy.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/se_memcpy.h
 sgx_default_quote_provider.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.h
 sgx_default_qcnl_wrapper.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_qcnl_wrapper.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_qcnl_wrapper.h
 
 /opt/intel/sgxsdk/include/sgx_attributes.h
 stdint.h

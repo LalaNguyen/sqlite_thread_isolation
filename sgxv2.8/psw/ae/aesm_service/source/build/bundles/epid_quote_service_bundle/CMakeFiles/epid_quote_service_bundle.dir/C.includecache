@@ -56,13 +56,13 @@ sgx_tseal.h
 sgx_report.h
 ../../../pve/sgx_report.h
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/provision_enclave_u.c
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/provision_enclave_u.c
 provision_enclave_u.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/provision_enclave_u.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/provision_enclave_u.h
 errno.h
 -
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/provision_enclave_u.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/provision_enclave_u.h
 stdint.h
 -
 wchar.h
@@ -72,19 +72,19 @@ stddef.h
 string.h
 -
 sgx_edger8r.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/sgx_edger8r.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/sgx_edger8r.h
 provision_msg.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/provision_msg.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/provision_msg.h
 stdlib.h
 -
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/quoting_enclave_u.c
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/quoting_enclave_u.c
 quoting_enclave_u.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/quoting_enclave_u.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/quoting_enclave_u.h
 errno.h
 -
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/quoting_enclave_u.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/quoting_enclave_u.h
 stdint.h
 -
 wchar.h
@@ -94,11 +94,11 @@ stddef.h
 string.h
 -
 sgx_edger8r.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/sgx_edger8r.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/sgx_edger8r.h
 sgx_report.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/sgx_report.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/sgx_report.h
 sgx_quote.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/sgx_quote.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/epid_quote_service_bundle/sgx_quote.h
 stdlib.h
 -
 

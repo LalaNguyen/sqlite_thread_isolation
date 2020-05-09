@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
+CMAKE_SOURCE_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
+CMAKE_BINARY_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/oal/CMakeFiles/progress.marks
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles 0
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/oal/CMakeFiles/progress.marks
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/clean
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/preinstall
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/preinstall
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 oal/CMakeFiles/oal.dir/rule:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/CMakeFiles/oal.dir/rule
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 oal/CMakeFiles/oal.dir/rule
 .PHONY : oal/CMakeFiles/oal.dir/rule
 
 # Convenience name for target.
@@ -122,89 +122,89 @@ oal: oal/CMakeFiles/oal.dir/rule
 
 # fast build rule for target.
 oal/fast:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/build
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/build
 .PHONY : oal/fast
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.o
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.o
-
-# target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.o
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.i
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.i
-
-# target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.i
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.s
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.s
-
-# target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.s
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.o
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.o
 
 # target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.o
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.i
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.i
 
 # target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.i
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.s
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.s
 
 # target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.s
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.o
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.o
 
 # target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.o
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.i
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.i
 
 # target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.i
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.s
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.s
 
 # target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.s
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.o
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.o
+
+# target to build an object file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.o
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.i
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.i
+
+# target to preprocess a source file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.i
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.s
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.s
+
+# target to generate assembly for a file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.s
 
 linux/aesm_thread.o: linux/aesm_thread.cpp.o
 
@@ -212,7 +212,7 @@ linux/aesm_thread.o: linux/aesm_thread.cpp.o
 
 # target to build an object file
 linux/aesm_thread.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_thread.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_thread.cpp.o
 .PHONY : linux/aesm_thread.cpp.o
 
 linux/aesm_thread.i: linux/aesm_thread.cpp.i
@@ -221,7 +221,7 @@ linux/aesm_thread.i: linux/aesm_thread.cpp.i
 
 # target to preprocess a source file
 linux/aesm_thread.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_thread.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_thread.cpp.i
 .PHONY : linux/aesm_thread.cpp.i
 
 linux/aesm_thread.s: linux/aesm_thread.cpp.s
@@ -230,7 +230,7 @@ linux/aesm_thread.s: linux/aesm_thread.cpp.s
 
 # target to generate assembly for a file
 linux/aesm_thread.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_thread.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_thread.cpp.s
 .PHONY : linux/aesm_thread.cpp.s
 
 linux/aesm_util.o: linux/aesm_util.cpp.o
@@ -239,7 +239,7 @@ linux/aesm_util.o: linux/aesm_util.cpp.o
 
 # target to build an object file
 linux/aesm_util.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_util.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_util.cpp.o
 .PHONY : linux/aesm_util.cpp.o
 
 linux/aesm_util.i: linux/aesm_util.cpp.i
@@ -248,7 +248,7 @@ linux/aesm_util.i: linux/aesm_util.cpp.i
 
 # target to preprocess a source file
 linux/aesm_util.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_util.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_util.cpp.i
 .PHONY : linux/aesm_util.cpp.i
 
 linux/aesm_util.s: linux/aesm_util.cpp.s
@@ -257,7 +257,7 @@ linux/aesm_util.s: linux/aesm_util.cpp.s
 
 # target to generate assembly for a file
 linux/aesm_util.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_util.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/aesm_util.cpp.s
 .PHONY : linux/aesm_util.cpp.s
 
 linux/error_report.o: linux/error_report.cpp.o
@@ -266,7 +266,7 @@ linux/error_report.o: linux/error_report.cpp.o
 
 # target to build an object file
 linux/error_report.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/error_report.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/error_report.cpp.o
 .PHONY : linux/error_report.cpp.o
 
 linux/error_report.i: linux/error_report.cpp.i
@@ -275,7 +275,7 @@ linux/error_report.i: linux/error_report.cpp.i
 
 # target to preprocess a source file
 linux/error_report.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/error_report.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/error_report.cpp.i
 .PHONY : linux/error_report.cpp.i
 
 linux/error_report.s: linux/error_report.cpp.s
@@ -284,7 +284,7 @@ linux/error_report.s: linux/error_report.cpp.s
 
 # target to generate assembly for a file
 linux/error_report.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/error_report.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/error_report.cpp.s
 .PHONY : linux/error_report.cpp.s
 
 linux/event_strings.o: linux/event_strings.cpp.o
@@ -293,7 +293,7 @@ linux/event_strings.o: linux/event_strings.cpp.o
 
 # target to build an object file
 linux/event_strings.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/event_strings.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/event_strings.cpp.o
 .PHONY : linux/event_strings.cpp.o
 
 linux/event_strings.i: linux/event_strings.cpp.i
@@ -302,7 +302,7 @@ linux/event_strings.i: linux/event_strings.cpp.i
 
 # target to preprocess a source file
 linux/event_strings.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/event_strings.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/event_strings.cpp.i
 .PHONY : linux/event_strings.cpp.i
 
 linux/event_strings.s: linux/event_strings.cpp.s
@@ -311,7 +311,7 @@ linux/event_strings.s: linux/event_strings.cpp.s
 
 # target to generate assembly for a file
 linux/event_strings.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/event_strings.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/event_strings.cpp.s
 .PHONY : linux/event_strings.cpp.s
 
 linux/internal_log.o: linux/internal_log.cpp.o
@@ -320,7 +320,7 @@ linux/internal_log.o: linux/internal_log.cpp.o
 
 # target to build an object file
 linux/internal_log.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/internal_log.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/internal_log.cpp.o
 .PHONY : linux/internal_log.cpp.o
 
 linux/internal_log.i: linux/internal_log.cpp.i
@@ -329,7 +329,7 @@ linux/internal_log.i: linux/internal_log.cpp.i
 
 # target to preprocess a source file
 linux/internal_log.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/internal_log.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/internal_log.cpp.i
 .PHONY : linux/internal_log.cpp.i
 
 linux/internal_log.s: linux/internal_log.cpp.s
@@ -338,7 +338,7 @@ linux/internal_log.s: linux/internal_log.cpp.s
 
 # target to generate assembly for a file
 linux/internal_log.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/internal_log.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/internal_log.cpp.s
 .PHONY : linux/internal_log.cpp.s
 
 linux/oal_power.o: linux/oal_power.cpp.o
@@ -347,7 +347,7 @@ linux/oal_power.o: linux/oal_power.cpp.o
 
 # target to build an object file
 linux/oal_power.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/oal_power.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/oal_power.cpp.o
 .PHONY : linux/oal_power.cpp.o
 
 linux/oal_power.i: linux/oal_power.cpp.i
@@ -356,7 +356,7 @@ linux/oal_power.i: linux/oal_power.cpp.i
 
 # target to preprocess a source file
 linux/oal_power.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/oal_power.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/oal_power.cpp.i
 .PHONY : linux/oal_power.cpp.i
 
 linux/oal_power.s: linux/oal_power.cpp.s
@@ -365,7 +365,7 @@ linux/oal_power.s: linux/oal_power.cpp.s
 
 # target to generate assembly for a file
 linux/oal_power.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/oal_power.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/oal_power.cpp.s
 .PHONY : linux/oal_power.cpp.s
 
 linux/persistent_storage_table.o: linux/persistent_storage_table.cpp.o
@@ -374,7 +374,7 @@ linux/persistent_storage_table.o: linux/persistent_storage_table.cpp.o
 
 # target to build an object file
 linux/persistent_storage_table.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/persistent_storage_table.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/persistent_storage_table.cpp.o
 .PHONY : linux/persistent_storage_table.cpp.o
 
 linux/persistent_storage_table.i: linux/persistent_storage_table.cpp.i
@@ -383,7 +383,7 @@ linux/persistent_storage_table.i: linux/persistent_storage_table.cpp.i
 
 # target to preprocess a source file
 linux/persistent_storage_table.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/persistent_storage_table.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/persistent_storage_table.cpp.i
 .PHONY : linux/persistent_storage_table.cpp.i
 
 linux/persistent_storage_table.s: linux/persistent_storage_table.cpp.s
@@ -392,7 +392,7 @@ linux/persistent_storage_table.s: linux/persistent_storage_table.cpp.s
 
 # target to generate assembly for a file
 linux/persistent_storage_table.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/persistent_storage_table.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f oal/CMakeFiles/oal.dir/build.make oal/CMakeFiles/oal.dir/linux/persistent_storage_table.cpp.s
 .PHONY : linux/persistent_storage_table.cpp.s
 
 # Help Target
@@ -404,15 +404,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... oal"
 	@echo "... edit_cache"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.s"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.s"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.s"
 	@echo "... linux/aesm_thread.o"
 	@echo "... linux/aesm_thread.i"
 	@echo "... linux/aesm_thread.s"
@@ -445,6 +445,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

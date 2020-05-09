@@ -32,13 +32,13 @@ stdint.h
 unistd.h
 -
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/launch_enclave_u.c
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/launch_enclave_u.c
 launch_enclave_u.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/launch_enclave_u.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/launch_enclave_u.h
 errno.h
 -
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/launch_enclave_u.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/launch_enclave_u.h
 stdint.h
 -
 wchar.h
@@ -48,11 +48,11 @@ stddef.h
 string.h
 -
 sgx_edger8r.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/sgx_edger8r.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/sgx_edger8r.h
 arch.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/arch.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/arch.h
 sgx_report.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/sgx_report.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/le_launch_service_bundle/sgx_report.h
 stdlib.h
 -
 

@@ -4,14 +4,23 @@ enclave {
     from "sgx_pthread.edl" import *;
 
     trusted {
-        public void ecall_opendb();  // open SQLite connection to In-Memory DB
-        public void ecall_execute_sql([in, string] const char *sql);  // execute SQL statement within enclave
-        public void ecall_closedb();  // close SQLite db connection
+        public sgx_status_t ecall_init_AGENTS( [user_check] uint8_t *heap_storage, 
+                                    [in, size=16] uint8_t *cfi_key, 
+                                     [user_check] uint8_t *meta_storage,  
+                                     [user_check] void *agent_status,
+                                     [user_check] uint8_t *return_stack_storage,
+                                     [user_check] uint8_t *ssas_storage,
+                                     [user_check] uint8_t *debug_pointer);
+        public void ecall_opendb(long tid);  // open SQLite connection to In-Memory DB
+        public void ecall_execute_sql(long tid, [in, string] const char *sql);  // execute SQL statement within enclave
+        public void ecall_closedb(long tid);  // close SQLite db connection
+        public void ecall_terminus_execute_sql(long tid, [in, string] const char *sql);  // execute SQL statement within enclave
     };
 
     untrusted {
         void ocall_println_string([in, string] const char *str);
         void ocall_print_string([in, string] const char *str);
         void ocall_print_error([in, string] const char *str);
+        void ocall_my_print_string(long tid, [in, string] const char *str);
     };
 };

@@ -2833,6 +2833,9 @@ SQLITE_API void *sqlite3_malloc64(sqlite3_uint64);
 SQLITE_API void *sqlite3_realloc(void*, int);
 SQLITE_API void *sqlite3_realloc64(void*, sqlite3_uint64);
 SQLITE_API void sqlite3_free(void*);
+SQLITE_API void *my_sqlite3DbMallocRaw(sqlite3*, sqlite3_uint64);
+SQLITE_API void *my_get_lookaside(sqlite3*);
+SQLITE_API int my_get_lookaside_size();
 SQLITE_API sqlite3_uint64 sqlite3_msize(void*);
 
 /*

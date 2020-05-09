@@ -1,4 +1,4 @@
-# Install script for directory: /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/le_launch_service_bundle
+# Install script for directory: /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/le_launch_service_bundle
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp" "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qpl/CMakeFiles/dcap_quoteprov.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o"
+  "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp" "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qpl/CMakeFiles/dcap_quoteprov.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qpl/sgx_default_quote_provider.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -25,7 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/DependInfo.cmake"
+  "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -135,9 +135,9 @@ DECLARE_GLOBAL_FUNC enclave_entry
     cmp     $0, %xax
     jne     .Ldo_handler                /* handle exception state */
     /* xor     %xdx, %xdx                  xdx is cssa, make sure it is 0 */
-    #READ_TD_DATA last_sp
-    #cmp     $0, %xax
-    #jne .Lswitch_stack
+    READ_TD_DATA last_sp
+    cmp     $0, %xax
+    jne .Lswitch_stack
     GET_STACK_BASE  %xbx                /* if last_sp == 0, set sp to stack base */
     sub     $STATIC_STACK_SIZE, %xax    /* give space for static stack */
 .Lswitch_stack:

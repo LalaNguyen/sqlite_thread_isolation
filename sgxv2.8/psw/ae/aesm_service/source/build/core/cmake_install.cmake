@@ -1,4 +1,4 @@
-# Install script for directory: /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/core
+# Install script for directory: /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/core/ipc/cmake_install.cmake")
+  include("/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/core/ipc/cmake_install.cmake")
 
 endif()
 

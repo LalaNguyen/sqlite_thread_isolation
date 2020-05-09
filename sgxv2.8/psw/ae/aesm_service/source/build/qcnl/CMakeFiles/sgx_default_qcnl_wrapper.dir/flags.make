@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIC   -std=gnu++11
 
 CXX_DEFINES = -DAESM_ECDSA_BUNDLE -Dsgx_default_qcnl_wrapper_EXPORTS
 
-CXX_INCLUDES = -I/opt/intel/sgxsdk/include -I/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../../../external/dcap_source/QuoteGeneration/qcnl/inc -I/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../../../external/dcap_source/QuoteGeneration/pce_wrapper/inc -I/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../../../external/dcap_source/QuoteGeneration/quote_wrapper/common/inc -I/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../../../external/dcap_source/QuoteGeneration/common/inc/internal 
+CXX_INCLUDES = -I/opt/intel/sgxsdk/include -I/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../../../external/dcap_source/QuoteGeneration/qcnl/inc -I/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../../../external/dcap_source/QuoteGeneration/pce_wrapper/inc -I/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../../../external/dcap_source/QuoteGeneration/quote_wrapper/common/inc -I/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../../../external/dcap_source/QuoteGeneration/common/inc/internal 
 

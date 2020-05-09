@@ -88,7 +88,7 @@ sgx_status_t _sgx_ecall(const sgx_enclave_id_t enclave_id, const int proc, const
         return SGX_ERROR_INVALID_ENCLAVE_ID;
 
     sgx_status_t result = SGX_ERROR_UNEXPECTED;
-    if(proc >= 2)
+    if(proc >= 4) // We reserved two ecalls for initialization of the agents
     {
         agent_info->agent_status=1;
         result = enclave->ecall(proc, ocall_table, ms, is_switchless);

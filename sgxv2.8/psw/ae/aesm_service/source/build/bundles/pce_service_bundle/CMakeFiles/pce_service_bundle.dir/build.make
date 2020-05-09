@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
+CMAKE_SOURCE_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
+CMAKE_BINARY_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
 
 # Include any dependencies generated for this target.
 include bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/depend.make
@@ -58,31 +58,31 @@ include bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/progress.ma
 include bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/flags.make
 
 bundles/pce_service_bundle/pce_u.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating pce_u.c"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --untrusted --untrusted-dir /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../pce/pce.edl --search-path /opt/intel/sgxsdk/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating pce_u.c"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --untrusted --untrusted-dir /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/../../pce/pce.edl --search-path /opt/intel/sgxsdk/include
 
 bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp: bundles/pce_service_bundle/pce_service_bundle/res_0.zip
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Checking resource dependencies for pce_service_bundle"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/cmake -E copy /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/share/cppmicroservices4/cmake/CMakeResourceDependencies.cpp /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Checking resource dependencies for pce_service_bundle"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/cmake -E copy /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/share/cppmicroservices4/cmake/CMakeResourceDependencies.cpp /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp
 
 bundles/pce_service_bundle/pce_service_bundle/res_0.zip: ../bundles/pce_service_bundle/manifest.json
-bundles/pce_service_bundle/pce_service_bundle/res_0.zip: /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/bin/usResourceCompiler4
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Checking resource dependencies for pce_service_bundle"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle && /usr/bin/cmake -E make_directory /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle && /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/bin/usResourceCompiler4 -o /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/res_0.zip -n pce_service_bundle_name -r manifest.json
+bundles/pce_service_bundle/pce_service_bundle/res_0.zip: /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/bin/usResourceCompiler4
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Checking resource dependencies for pce_service_bundle"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle && /usr/bin/cmake -E make_directory /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle && /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/bin/usResourceCompiler4 -o /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/res_0.zip -n pce_service_bundle_name -r manifest.json
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.o: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/flags.make
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.o: ../bundles/pce_service_bundle/PCEClass.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.o"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.o -c /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/PCEClass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.o"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.o -c /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/PCEClass.cpp
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.i"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/PCEClass.cpp > CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/PCEClass.cpp > CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.i
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.s"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/PCEClass.cpp -o CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/PCEClass.cpp -o CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.s
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.o.requires:
 
@@ -97,16 +97,16 @@ bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/PCEClass.cpp.o.prov
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.o: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/flags.make
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.o: ../bundles/pce_service_bundle/pce_service_bundle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.o"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.o -c /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/pce_service_bundle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.o"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.o -c /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/pce_service_bundle.cpp
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.i"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/pce_service_bundle.cpp > CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/pce_service_bundle.cpp > CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.i
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.s"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/pce_service_bundle.cpp -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle/pce_service_bundle.cpp -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.s
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle.cpp.o.requires:
 
@@ -121,16 +121,16 @@ bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle.
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_u.c.o: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/flags.make
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_u.c.o: bundles/pce_service_bundle/pce_u.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_u.c.o"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pce_service_bundle.dir/pce_u.c.o   -c /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_u.c.o"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pce_service_bundle.dir/pce_u.c.o   -c /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.c
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_u.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pce_service_bundle.dir/pce_u.c.i"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.c > CMakeFiles/pce_service_bundle.dir/pce_u.c.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.c > CMakeFiles/pce_service_bundle.dir/pce_u.c.i
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_u.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pce_service_bundle.dir/pce_u.c.s"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.c -o CMakeFiles/pce_service_bundle.dir/pce_u.c.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.c -o CMakeFiles/pce_service_bundle.dir/pce_u.c.s
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_u.c.o.requires:
 
@@ -145,16 +145,16 @@ bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_u.c.o.provides.
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.o: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/flags.make
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.o: bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.o"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.o -c /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.o"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.o -c /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.i"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp > CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp > CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.i
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.s"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.s
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.o.requires:
 
@@ -169,16 +169,16 @@ bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.o: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/flags.make
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.o: bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_init.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.o"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.o -c /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_init.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.o"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.o -c /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_init.cpp
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.i"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_init.cpp > CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_init.cpp > CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.i
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.s"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_init.cpp -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_init.cpp -o CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.s
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.o.requires:
 
@@ -208,13 +208,13 @@ bin/bundles/libpce_service_bundle.so: bundles/pce_service_bundle/CMakeFiles/pce_
 bin/bundles/libpce_service_bundle.so: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_resources.cpp.o
 bin/bundles/libpce_service_bundle.so: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/pce_service_bundle/cppmicroservices_init.cpp.o
 bin/bundles/libpce_service_bundle.so: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/build.make
-bin/bundles/libpce_service_bundle.so: /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/lib/libCppMicroServices.so.4.0.0
+bin/bundles/libpce_service_bundle.so: /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/lib/libCppMicroServices.so.4.0.0
 bin/bundles/libpce_service_bundle.so: bin/liboal.so
 bin/bundles/libpce_service_bundle.so: bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library ../../bin/bundles/libpce_service_bundle.so"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pce_service_bundle.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library ../../bin/bundles/libpce_service_bundle.so"
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pce_service_bundle.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Appending zipped resources to pce_service_bundle"
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle && objcopy --add-section .note.sgx.aesm_resource=/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/res_0.zip /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bin/bundles/libpce_service_bundle.so
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle && objcopy --add-section .note.sgx.aesm_resource=/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_service_bundle/res_0.zip /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bin/bundles/libpce_service_bundle.so
 
 # Rule to build all files generated by this target.
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/build: bin/bundles/libpce_service_bundle.so
@@ -230,12 +230,12 @@ bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/requires: bundles/p
 .PHONY : bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/requires
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/clean:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && $(CMAKE_COMMAND) -P CMakeFiles/pce_service_bundle.dir/cmake_clean.cmake
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle && $(CMAKE_COMMAND) -P CMakeFiles/pce_service_bundle.dir/cmake_clean.cmake
 .PHONY : bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/clean
 
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/depend: bundles/pce_service_bundle/pce_u.c
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/depend: bundles/pce_service_bundle/pce_service_bundle/cppmicroservices_resources.cpp
 bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/depend: bundles/pce_service_bundle/pce_service_bundle/res_0.zip
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/pce_service_bundle /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : bundles/pce_service_bundle/CMakeFiles/pce_service_bundle.dir/depend
 

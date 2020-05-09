@@ -25,7 +25,7 @@ bundles/linux_network_service_bundle/CMakeFiles/linux_network_service_bundle.dir
  ../common/oal/internal_log.h
  ../common/oal/oal.h
  ../common/oal/power.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/aesm_encode.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/aesm_encode.cpp
  /opt/intel/sgxsdk/include/sgx_attributes.h
  /opt/intel/sgxsdk/include/sgx_defs.h
  /opt/intel/sgxsdk/include/sgx_eid.h
@@ -77,8 +77,8 @@ bundles/linux_network_service_bundle/CMakeFiles/linux_network_service_bundle.dir
  ../common/prof_fun.h
  ../interfaces/network_service.h
  ../interfaces/service.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/aesm_http_msg.cpp
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/aesm_network.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/aesm_http_msg.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/aesm_network.h
  /opt/intel/sgxsdk/include/sgx.h
  /opt/intel/sgxsdk/include/sgx_attributes.h
  /opt/intel/sgxsdk/include/sgx_defs.h
@@ -103,26 +103,26 @@ bundles/linux_network_service_bundle/CMakeFiles/linux_network_service_bundle.dir
  ../common/oal/power.h
  ../interfaces/network_service.h
  ../interfaces/service.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/Any.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleActivator.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleContext.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/FrameworkConfig.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/FrameworkExport.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GlobalConfig.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ListenerFunctors.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ListenerToken.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceException.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceInterface.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceProperties.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceReference.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceReferenceBase.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceRegistration.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceRegistrationBase.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/aesm_network.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/linux_network_service_bundle.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/Any.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleActivator.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleContext.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/FrameworkConfig.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/FrameworkExport.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GlobalConfig.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ListenerFunctors.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ListenerToken.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceException.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceInterface.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceProperties.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceReference.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceReferenceBase.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceRegistration.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceRegistrationBase.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/aesm_network.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/linux_network_service_bundle/linux_network_service_bundle.cpp
 bundles/linux_network_service_bundle/CMakeFiles/linux_network_service_bundle.dir/linux_network_service_bundle/cppmicroservices_init.cpp.o
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleInitialization.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GlobalConfig.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/linux_network_service_bundle/linux_network_service_bundle/cppmicroservices_init.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleInitialization.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GlobalConfig.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/linux_network_service_bundle/linux_network_service_bundle/cppmicroservices_init.cpp
 bundles/linux_network_service_bundle/CMakeFiles/linux_network_service_bundle.dir/linux_network_service_bundle/cppmicroservices_resources.cpp.o
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/linux_network_service_bundle/linux_network_service_bundle/cppmicroservices_resources.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/linux_network_service_bundle/linux_network_service_bundle/cppmicroservices_resources.cpp

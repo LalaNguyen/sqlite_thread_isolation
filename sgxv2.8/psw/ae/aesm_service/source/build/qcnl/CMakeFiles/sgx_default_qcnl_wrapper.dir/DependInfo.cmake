@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp" "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o"
-  "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp" "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o"
-  "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp" "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o"
+  "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp" "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o"
+  "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp" "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o"
+  "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp" "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

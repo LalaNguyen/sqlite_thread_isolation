@@ -23,6 +23,6 @@
 // Macros used by the unit tests
 //-------------------------------------------------------------------
 
-#define US_FRAMEWORK_SOURCE_DIR "/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/framework"
+#define US_FRAMEWORK_SOURCE_DIR "/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/framework"
 
 #endif // CPPMICROSERVICES_FRAMEWORKCONFIG_H

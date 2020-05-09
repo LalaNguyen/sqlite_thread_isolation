@@ -75,6 +75,8 @@ typedef struct thread_info{
     unsigned long thread_id;
     uint8_t *return_stack_location; /* agent */
     uint8_t *ssas_storage_entry; /* agent */
+    uint8_t *private_storage_entry; /* agent */
+    uint32_t ciph_priv_mem_size;
     uint32_t ciph_ssas_size;
     uint32_t ssas_size;
     uint32_t thread_stack_size;
@@ -106,9 +108,19 @@ static thread_info_t* ctx_table = (thread_info_t*) malloc(g_meta_plain_size); /*
 static uint8_t *g_out_meta_storage_entry_p;  /* store agent metadata */
 static uint8_t *g_out_return_stack_storage_p; /*store return stack of this enclave */
 static uint8_t *g_out_ssas_storage_p; /*store return stack of this enclave */
+static uint8_t *g_out_private_storage_p; /*store return stack of this enclave */
+static uint8_t *g_out_agent_private_storage_p; /*store return stack of this enclave */
 static uint8_t* g_in_tmp_ssas_buffer = (uint8_t*) malloc(0x8000);
 static uint8_t* g_in_sealed_ssas = (uint8_t*) malloc(0x8000);
 uint32_t g_ssa_size = SE_PAGE_SIZE;
+
+/* Allocate tmp buffer for look aside buffer */
+static uint8_t *g_in_sealed_private_mem_buffer = (uint8_t*) malloc(0xE000); /*store return stack of this enclave */
+static uint8_t *g_in_tmp_private_mem_buffer = (uint8_t*) malloc(0xE000); /*store return stack of this enclave */
+static uint8_t *g_in_private_mem_p;
+static uint32_t g_private_mem_size;
+static uint32_t g_config_size;
+static uint8_t *g_lks_config;
 
 /* Allocate buffers for encrypt/decrypt metadata*/
 uint8_t *g_in_meta_plaintext = (uint8_t*) malloc(g_meta_plain_size);
@@ -116,6 +128,7 @@ uint32_t g_meta_ciph_size = sgx_calc_sealed_data_size(0,g_meta_plain_size);
 uint8_t *g_in_sealed_metadata = (uint8_t*) malloc(g_meta_ciph_size);
 uint32_t g_plain_return_stack_size = 4096;
 uint32_t g_return_stack_ciph_size = sgx_calc_sealed_data_size(0, g_plain_return_stack_size);
+
 
 /* Which thread is running ?*/
 static unsigned long g_current_state = 0;
@@ -132,7 +145,7 @@ static unsigned long g_current_state = 0;
 #define MISC_NON_SECURITY_BITS      0x0FFFFFFF  /* bit[27:0]: have no security implications */
 #define TSEAL_DEFAULT_MISCMASK      (~MISC_NON_SECURITY_BITS)
 #define KEY_POLICY_KSS  (SGX_KEYPOLICY_CONFIGID | SGX_KEYPOLICY_ISVFAMILYID | SGX_KEYPOLICY_ISVEXTPRODID)
-
+#define MAX_CACHE_SIZE 0xE000
 sgx_status_t my_seal_data(  const uint32_t additional_MACtext_length,
                             const uint8_t *p_additional_MACtext, const uint32_t text2encrypt_length,
                             const uint8_t *p_text2encrypt, const uint32_t sealed_data_size,
@@ -288,11 +301,46 @@ void *sgx_register_ssas_storage(uint8_t *storage){
     return NULL;
 }
 
+void *sgx_register_private_data_storage(uint8_t *storage){
+    g_out_private_storage_p = storage;
+    return NULL;
+}
+
+void *sgx_register_private_mem(uint8_t *p,  uint32_t size, uint8_t *config, uint32_t lookaside_config_size){
+    g_in_private_mem_p = p;
+    g_lks_config = config;
+    g_private_mem_size = size;
+    g_config_size = lookaside_config_size;
+    return NULL;
+}
+
 void *sgx_register_agent_status(void *status){
     agent_info = (encl_thr_info*) status;
     return NULL;
 }
 
+/* Agent saves the initial copy of the data first */
+void *sgx_snapshot_private_mem(uint8_t *p){
+    sgx_status_t status = SGX_ERROR_UNEXPECTED;
+      /* However, we need to backup the private memory storage */
+    uint32_t ciph_priv_mem_size = 0;
+    uint32_t plain_priv_mem_size = g_private_mem_size + g_config_size;
+    ciph_priv_mem_size = sgx_calc_sealed_data_size(0, plain_priv_mem_size);
+    memcpy(g_in_tmp_private_mem_buffer, p, g_private_mem_size);
+    memcpy(g_in_tmp_private_mem_buffer + g_private_mem_size, g_lks_config, g_config_size);
+
+    status = my_seal_data(  0, NULL, plain_priv_mem_size, (uint8_t*) g_in_tmp_private_mem_buffer, 
+                            ciph_priv_mem_size, 
+                            (sgx_sealed_data_t *) g_in_sealed_private_mem_buffer);
+    assert(status == SGX_SUCCESS);
+    /* Assign the start of the storage for the agent */
+    g_out_agent_private_storage_p = g_out_private_storage_p;
+    g_out_private_storage_p += MAX_CACHE_SIZE;
+    /* Store the snapshot in agent storage */
+    memcpy(g_out_agent_private_storage_p, g_in_sealed_private_mem_buffer, ciph_priv_mem_size);
+
+    return NULL;
+}
 
 /* Given a target thread's ID, return its index number in the metadata table*/
 int get_thread_idx(unsigned long target_idx)
@@ -996,302 +1044,335 @@ extern "C" sgx_status_t trts_swap_agent_handle_exception(void *tcs, int32_t inde
             memset(cfi_key, 0, 16);
         }
 
-                size_t thread_stack_base = 0;
-                thread_data_t *thread_data = NULL;
-                int thread_idx = -1;
-                int prev_thread_idx = -1;
-                void *current_thread_stack = NULL;
-                ssa_gpr_t *ssa_gpr = NULL;
+        size_t thread_stack_base = 0;
+        thread_data_t *thread_data = NULL;
+        int thread_idx = -1;
+        int prev_thread_idx = -1;
+        void *current_thread_stack = NULL;
+        ssa_gpr_t *ssa_gpr = NULL;
 
-                thread_data = get_thread_data();
-                assert(thread_data != NULL);
+        thread_data = get_thread_data();
+        assert(thread_data != NULL);
 
-                thread_stack_base = thread_data->stack_limit_addr + 0x20000;
-                size_t prev_thread_id_in_enclave = 0;
+        thread_stack_base = thread_data->stack_limit_addr + 0x20000;
+        size_t prev_thread_id_in_enclave = 0;
 
-                
-                if(g_current_thread_cache->thread_id != 0)
+        
+        if(g_current_thread_cache->thread_id != 0)
+        {
+            /* g_current_state != 0 when there is a previous thread in an enclave
+            * It can be two cases:
+            * 1. The same thread resumes in the enclave
+            * 2. Different thread enters the enclave
+            * In either cases, we check the thread cache to see if the target thread ID matches
+            * the previous thread
+            */
+            prev_thread_id_in_enclave = g_current_thread_cache->thread_id ; 
+            /* new thread enters the enclave, accessing the agent's metadata */
+            /* Unseal metadata in enclave */
+            if(ENABLE_SEALING)
+            {
+                status = unseal_g_metadata();
+                assert(status == SGX_SUCCESS);
+            }
+            else
+            {   
+                status = SGX_SUCCESS;
+            }
+            /* Get idx of the current threads */
+            prev_thread_idx = get_thread_idx(g_current_thread_cache->thread_id);
+            /* If the current thread was not in the table, get it an index */
+            if(prev_thread_idx == -1)
+            {
+                prev_thread_idx = get_thread_idx(0);
+            }
+            
+            /* New thread is about to launch, save the stack */
+            uint32_t prev_stack_size = 0;
+            size_t curr_thread_sp = (size_t) thread_data->last_sp;
+            /* always consider the size for an ssa even if it is empty */
+            uint32_t ssas_size = 0;
+            uint32_t ciph_ssas_size = 0;
+            /* If new thread was launched on the cssa = 0 */
+            if (cssa == 0)
+            {
+                /* previous call into an enclave was OCALL. Save thread stack based on the last_sp*/
+                if(curr_thread_sp < (size_t) thread_stack_base)
                 {
-                    /* g_current_state != 0 when there is a previous thread in an enclave
-                    * It can be two cases:
-                    * 1. The same thread resumes in the enclave
-                    * 2. Different thread enters the enclave
-                    * In either cases, we check the thread cache to see if the target thread ID matches
-                    * the previous thread
-                    */
-                    prev_thread_id_in_enclave = g_current_thread_cache->thread_id ; 
-                    // if (g_current_thread_cache->thread_id == target_thread_id)
-                    // {
-                    //     /* Do not update thread cache */
-                    //     status = SGX_SUCCESS;
-                    // }
-                    // else
-                    // {
-                        /* new thread enters the enclave, accessing the agent's metadata */
-                        /* Unseal metadata in enclave */
-                        if(ENABLE_SEALING)
-                        {
-                            status = unseal_g_metadata();
-                            assert(status == SGX_SUCCESS);
-                        }
-                        else
-                        {   
-                            status = SGX_SUCCESS;
-                        }
-                        /* Get idx of the current threads */
-                        prev_thread_idx = get_thread_idx(g_current_thread_cache->thread_id);
-                        /* If the current thread was not in the table, get it an index */
-                        if(prev_thread_idx == -1)
-                        {
-                            prev_thread_idx = get_thread_idx(0);
-                        }
-                        
-                        /* New thread is about to launch, save the stack */
-                        uint32_t prev_stack_size = 0;
-                        size_t curr_thread_sp = (size_t) thread_data->last_sp;
-                        /* always consider the size for an ssa even if it is empty */
-                        uint32_t ssas_size = 0;
-                        uint32_t ciph_ssas_size = 0;
-                        /* If new thread was launched on the cssa = 0 */
-                        if (cssa == 0)
-                        {
-                            /* previous call into an enclave was OCALL. Save thread stack based on the last_sp*/
-                            if(curr_thread_sp < (size_t) thread_stack_base)
-                            {
-                                current_thread_stack = (void*) thread_data->last_sp;
-                                prev_stack_size = (uint32_t) thread_stack_base -  (uint32_t) thread_data->last_sp;
-                                // for debugging purpose 
-                                ocall_context_t *context = reinterpret_cast<ocall_context_t*>(thread_data->last_sp);
-                                (void) context;
-                                ssas_size +=  prev_stack_size;
-                                ciph_ssas_size = sgx_calc_sealed_data_size(0, ssas_size);
-                                memcpy(g_in_tmp_ssas_buffer, (uint8_t*)current_thread_stack, prev_stack_size);
-                                /* seal them to a common buffer */
-                                status = my_seal_data(  0, NULL, prev_stack_size, (uint8_t*)g_in_tmp_ssas_buffer, 
-                                                    ciph_ssas_size, (sgx_sealed_data_t *)g_in_sealed_ssas); 
-                                assert(status == SGX_SUCCESS);
-                                memcpy(g_current_thread_cache->ssas_storage_entry, g_in_sealed_ssas, ciph_ssas_size);
-                                g_current_thread_cache->ciph_ssas_size = ciph_ssas_size;
-                                g_current_thread_cache->thread_stack_size = prev_stack_size;
-                                g_current_thread_cache->ssas_size = ssas_size;
-                            }
-                            else 
-                            {
-                                /* previous call into an enclave was ecall and cssa = 0. Meaning the thread has finished its enclave
-                                execution. No need to save its stack*/
-                                g_current_thread_cache->ciph_ssas_size = 0;
-                                g_current_thread_cache->thread_stack_size = 0;
-                                g_current_thread_cache->ssas_size = 0;
-                            }
-                        }
-                        else 
-                        {
-                            ssa_gpr = reinterpret_cast<ssa_gpr_t *>(thread_data->first_ssa_gpr+(cssa-1)*0x1000);
-                            /* If new thread was launched on different cssa > 0, then two possiblities: 
-                            * - Previous thread was interrupted and this is the next thread to run
-                            * - Previous thread run at this cssa level, but has finished its enclave execution
-                            * TO distinguish between them, we rely on the rip, since non-interrupted thread 
-                            * would not be recorded in SSA
-                            * *******************************************************************/
-                            if(ssa_gpr->rip!=0)
-                            {
-                                /* If the previous ecall was interrupted */
-                                ssas_size += g_ssa_size; // interrupted thread always have ssa
-                                current_thread_stack = (void*) ssa_gpr->REG(sp);
-                                prev_stack_size = (uint32_t) thread_stack_base -  (uint32_t) ssa_gpr->REG(sp);
-                                ssas_size += prev_stack_size;
-                                ciph_ssas_size = sgx_calc_sealed_data_size(0, ssas_size);
-                                memcpy(g_in_tmp_ssas_buffer, (uint8_t*)((unsigned long) ssa_gpr & ~0xFFF), g_ssa_size); /* an SSA frame is page aligned */
-                                memcpy(g_in_tmp_ssas_buffer + g_ssa_size, (uint8_t*)current_thread_stack, prev_stack_size);
-                                status = my_seal_data(  0, NULL, ssas_size, (uint8_t*)g_in_tmp_ssas_buffer, 
-                                                        ciph_ssas_size, (sgx_sealed_data_t *)g_in_sealed_ssas); 
-                                assert(status == SGX_SUCCESS);
-                                memcpy(g_current_thread_cache->ssas_storage_entry, g_in_sealed_ssas, ciph_ssas_size);
-                                g_current_thread_cache->ciph_ssas_size = ciph_ssas_size;
-                                g_current_thread_cache->thread_stack_size = prev_stack_size;
-                                g_current_thread_cache->ssas_size = ssas_size;
-                                memset(ssa_gpr, 0, sizeof(sgx_cpu_context_t));
-                            }
-                            else
-                            {
-                                /* previous call into an enclave was ecall and cssa != 0. Meaning the thread has finished 
-                                its enclave execution. No need to save its stack*/                    
-                                g_current_thread_cache->ciph_ssas_size = 0;
-                                g_current_thread_cache->thread_stack_size = 0;
-                                g_current_thread_cache->ssas_size = 0;
-                            }
-                        }
-                            
-                    
-                        
-                        memcpy((void*)&g_current_thread_cache->thread_data, (void*)thread_data,sizeof(thread_data_t));
-                        /* Update the thread cache */
-                        memcpy(&ctx_table[prev_thread_idx], g_current_thread_cache, sizeof(thread_info_t));
-                        /* Get its index in the metadata table */
-                        thread_idx = get_thread_idx(target_thread_id);
-                        if (thread_idx != -1)
-                        {
-                            memcpy(g_current_thread_cache, &ctx_table[thread_idx], sizeof(thread_info_t));
-                        }
-                        else
-                        {
-                            memset(g_current_thread_cache, 0, sizeof(thread_info_t));
-                            g_current_thread_cache->thread_id = target_thread_id;
-                            /* Reinit the thread again */
-                            do_init_thread(tcs,false);
-                        }
-                        /* We are done with the metatable, seal it and clear it */
-                        if(ENABLE_SEALING)
-                        {
-                            seal_and_clear_g_metadata();
-                        }
-                    // }
+                    current_thread_stack = (void*) thread_data->last_sp;
+                    prev_stack_size = (uint32_t) thread_stack_base -  (uint32_t) thread_data->last_sp;
+                    // for debugging purpose 
+                    ocall_context_t *context = reinterpret_cast<ocall_context_t*>(thread_data->last_sp);
+                    (void) context;
+                    ssas_size +=  prev_stack_size;
+                    ciph_ssas_size = sgx_calc_sealed_data_size(0, ssas_size);
+                    memcpy(g_in_tmp_ssas_buffer, (uint8_t*)current_thread_stack, prev_stack_size);
+                    /* seal them to a common buffer */
+                    status = my_seal_data(  0, NULL, prev_stack_size, (uint8_t*)g_in_tmp_ssas_buffer, 
+                                        ciph_ssas_size, (sgx_sealed_data_t *)g_in_sealed_ssas); 
+                    assert(status == SGX_SUCCESS);
+                    memcpy(g_current_thread_cache->ssas_storage_entry, g_in_sealed_ssas, ciph_ssas_size);
+                    g_current_thread_cache->ciph_ssas_size = ciph_ssas_size;
+                    g_current_thread_cache->thread_stack_size = prev_stack_size;
+                    g_current_thread_cache->ssas_size = ssas_size;
+                }
+                else 
+                {
+                    /* previous call into an enclave was ecall and cssa = 0. Meaning the thread has finished its enclave
+                    execution. No need to save its stack*/
+                    g_current_thread_cache->ciph_ssas_size = 0;
+                    g_current_thread_cache->thread_stack_size = 0;
+                    g_current_thread_cache->ssas_size = 0;
+                    /* However, we need to backup the private memory storage */
+                    uint32_t ciph_priv_mem_size = 0;
+                    uint32_t plain_priv_mem_size = g_private_mem_size + g_config_size;
+                    ciph_priv_mem_size = sgx_calc_sealed_data_size(0, plain_priv_mem_size);
+
+                    memcpy(g_in_tmp_private_mem_buffer , g_in_private_mem_p, g_private_mem_size);
+                    memcpy(g_in_tmp_private_mem_buffer+g_private_mem_size, g_lks_config, g_config_size);
+
+                    status = my_seal_data(  0, NULL, plain_priv_mem_size, (uint8_t*) g_in_tmp_private_mem_buffer, 
+                                        ciph_priv_mem_size, (sgx_sealed_data_t *) g_in_sealed_private_mem_buffer);
+
+                    assert(status == SGX_SUCCESS);
+                    memcpy(g_current_thread_cache->private_storage_entry, g_in_sealed_private_mem_buffer, ciph_priv_mem_size);
+                    g_current_thread_cache->ciph_priv_mem_size = ciph_priv_mem_size;
+                    /* Clear the private mem */
+                    memset(g_in_private_mem_p, 0, g_private_mem_size);
+                }
+            }
+            else 
+            {
+                ssa_gpr = reinterpret_cast<ssa_gpr_t *>(thread_data->first_ssa_gpr+(cssa-1)*0x1000);
+                /* If new thread was launched on different cssa > 0, then two possiblities: 
+                * - Previous thread was interrupted and this is the next thread to run
+                * - Previous thread run at this cssa level, but has finished its enclave execution
+                * TO distinguish between them, we rely on the rip, since non-interrupted thread 
+                * would not be recorded in SSA
+                * *******************************************************************/
+                if(ssa_gpr->rip!=0)
+                {
+                    /* If the previous ecall was interrupted */
+                    ssas_size += g_ssa_size; // interrupted thread always have ssa
+                    current_thread_stack = (void*) ssa_gpr->REG(sp);
+                    prev_stack_size = (uint32_t) thread_stack_base -  (uint32_t) ssa_gpr->REG(sp);
+                    ssas_size += prev_stack_size;
+                    ciph_ssas_size = sgx_calc_sealed_data_size(0, ssas_size);
+                    memcpy(g_in_tmp_ssas_buffer, (uint8_t*)((unsigned long) ssa_gpr & ~0xFFF), g_ssa_size); /* an SSA frame is page aligned */
+                    memcpy(g_in_tmp_ssas_buffer + g_ssa_size, (uint8_t*)current_thread_stack, prev_stack_size);
+                    status = my_seal_data(  0, NULL, ssas_size, (uint8_t*)g_in_tmp_ssas_buffer, 
+                                            ciph_ssas_size, (sgx_sealed_data_t *)g_in_sealed_ssas); 
+                    assert(status == SGX_SUCCESS);
+                    memcpy(g_current_thread_cache->ssas_storage_entry, g_in_sealed_ssas, ciph_ssas_size);
+                    g_current_thread_cache->ciph_ssas_size = ciph_ssas_size;
+                    g_current_thread_cache->thread_stack_size = prev_stack_size;
+                    g_current_thread_cache->ssas_size = ssas_size;
+                    memset(ssa_gpr, 0, sizeof(sgx_cpu_context_t));
                 }
                 else
-                {   /* Very first thread enters enclave, unseal the ctx_table */
-                    if(ENABLE_SEALING)
-                    {
-                        status = unseal_g_metadata();
-                        assert(status == SGX_SUCCESS);
-                    }
-                    else
-                    {   
-                        status = SGX_SUCCESS;
-                    }
-                    g_current_thread_cache->thread_id = target_thread_id;
-                    memcpy((void*)&g_current_thread_cache->thread_data, (void*)thread_data,sizeof(thread_data_t));
+                {
+                    /* previous call into an enclave was ecall and cssa != 0. Meaning the thread has finished 
+                    its enclave execution. No need to save its stack*/                    
+                    g_current_thread_cache->ciph_ssas_size = 0;
+                    g_current_thread_cache->thread_stack_size = 0;
+                    g_current_thread_cache->ssas_size = 0;
                 }
+            }
+            memcpy((void*)&g_current_thread_cache->thread_data, (void*)thread_data,sizeof(thread_data_t));
+            /* Update the thread cache */
+            memcpy(&ctx_table[prev_thread_idx], g_current_thread_cache, sizeof(thread_info_t));
+            /* Get its index in the metadata table */
+            /* -1 means that the thread is new, otherwise it is an old thread that agent has seen before*/
+            thread_idx = get_thread_idx(target_thread_id);
+            if (thread_idx != -1)
+            {
+                /* Switch to new thread cache */
+                memcpy(g_current_thread_cache, &ctx_table[thread_idx], sizeof(thread_info_t));
+                /* Recover its private data */
+                memcpy( g_in_sealed_private_mem_buffer, 
+                        g_current_thread_cache->private_storage_entry, 
+                        g_current_thread_cache->ciph_priv_mem_size);
                 
-                /* If the thread is not initialized, the thread claims the resource */
-                if(g_current_thread_cache->is_initialized == 0)
+                uint32_t plain_size = g_config_size + g_private_mem_size;
+                status = my_unseal_data((sgx_sealed_data_t *) g_in_sealed_private_mem_buffer, NULL, NULL, 
+                                        (uint8_t*)g_in_tmp_private_mem_buffer, (uint32_t*)&plain_size);
+
+                memcpy(g_in_private_mem_p, g_in_tmp_private_mem_buffer, g_private_mem_size);
+                memcpy(g_lks_config, g_in_tmp_private_mem_buffer+g_private_mem_size, g_config_size);
+                assert(status == SGX_SUCCESS);
+            }
+            else
+            {
+                memset(g_current_thread_cache, 0, sizeof(thread_info_t));
+                g_current_thread_cache->thread_id = target_thread_id;
+                /* Reinit the thread again */
+                do_init_thread(tcs,false);
+                /* Recover the initial cache state */
+                uint32_t ciph_priv_mem_size = 0;
+                uint32_t plain_size = g_config_size + g_private_mem_size;
+                ciph_priv_mem_size = sgx_calc_sealed_data_size(0, plain_size);
+                memcpy( g_in_sealed_private_mem_buffer, 
+                        g_out_agent_private_storage_p, 
+                        ciph_priv_mem_size);
+                status = my_unseal_data((sgx_sealed_data_t *) g_in_sealed_private_mem_buffer, NULL, NULL, 
+                                        (uint8_t*)g_in_tmp_private_mem_buffer, (uint32_t*)&plain_size);
+                assert(status == SGX_SUCCESS);
+                memcpy(g_in_private_mem_p, g_in_tmp_private_mem_buffer, g_private_mem_size);
+                memcpy(g_lks_config, g_in_tmp_private_mem_buffer+g_private_mem_size, g_config_size);
+            }
+            /* We are done with the metatable, seal it and clear it */
+            if(ENABLE_SEALING)
+            {
+                seal_and_clear_g_metadata();
+            }
+        }
+        else
+        {   /* Very first thread enters enclave, unseal the ctx_table */
+            if(ENABLE_SEALING)
+            {
+                status = unseal_g_metadata();
+                assert(status == SGX_SUCCESS);
+            }
+            else
+            {   
+                status = SGX_SUCCESS;
+            }
+            g_current_thread_cache->thread_id = target_thread_id;
+            memcpy((void*)&g_current_thread_cache->thread_data, (void*)thread_data,sizeof(thread_data_t));
+        }
+        
+        /* If the thread is not initialized, the thread claims the resource */
+        if(g_current_thread_cache->is_initialized == 0)
+        {
+            g_current_thread_cache->return_stack_location = g_out_return_stack_storage_p;
+            g_current_thread_cache->ssas_storage_entry = g_out_ssas_storage_p;
+            g_current_thread_cache->private_storage_entry= g_out_private_storage_p;
+            g_out_return_stack_storage_p += g_return_stack_ciph_size;
+            g_out_private_storage_p += MAX_CACHE_SIZE;
+            g_out_ssas_storage_p += 5*SE_PAGE_SIZE;
+            g_current_thread_cache->is_initialized = 1;
+        }
+
+
+
+        if (index != ECMD_ORET && index != ECALL_SCHEDULE)
+        {
+            launch_thread(thread_idx, target_thread_id, index, ms, tcs);
+        }
+        else if (index == ECMD_ORET)
+        {
+            if(g_current_thread_cache->thread_id == prev_thread_id_in_enclave)
+            {
+
+            }
+            else
+            {
+                // Recover thread_data
+                memcpy((void*)thread_data, (void*)&g_current_thread_cache->thread_data, sizeof(thread_data_t));
+                //Swap with target thread's context
+                // Recover stack
+                if(g_current_thread_cache->ciph_ssas_size != 0)
                 {
-                    g_current_thread_cache->return_stack_location = g_out_return_stack_storage_p;
-                    g_current_thread_cache->ssas_storage_entry = g_out_ssas_storage_p;
-                    g_out_return_stack_storage_p += g_return_stack_ciph_size;
-                    g_out_ssas_storage_p += 5*SE_PAGE_SIZE;
-                    g_current_thread_cache->is_initialized = 1;
-                }
-
-
-
-                if (index != ECMD_ORET && index != ECALL_SCHEDULE)
-                {
-                    launch_thread(thread_idx, target_thread_id, index, ms, tcs);
-                }
-                else if (index == ECMD_ORET)
-                {
-                    if(g_current_thread_cache->thread_id == prev_thread_id_in_enclave)
-                    {
-
-                    }
-                    else
-                    {
-                        // Recover thread_data
-                        memcpy((void*)thread_data, (void*)&g_current_thread_cache->thread_data, sizeof(thread_data_t));
-                        //Swap with target thread's context
-                        // Recover stack
-                        if(g_current_thread_cache->ciph_ssas_size != 0)
-                        {
-                            memcpy(g_in_sealed_ssas, g_current_thread_cache->ssas_storage_entry, g_current_thread_cache->ciph_ssas_size);
-                            status = my_unseal_data((sgx_sealed_data_t *) g_in_sealed_ssas, NULL, NULL, 
-                                                    (uint8_t*)g_in_tmp_ssas_buffer, &g_current_thread_cache->ssas_size);
-                            assert(status == SGX_SUCCESS);
-                            current_thread_stack = (void*) thread_data->last_sp;
-                            memcpy(current_thread_stack, g_in_tmp_ssas_buffer, g_current_thread_cache->thread_stack_size);
-                        }        
-                        // for debugging purpose 
-                        ocall_context_t *context = reinterpret_cast<ocall_context_t*>(thread_data->last_sp);
-                        (void) context;
-                        // Update thread id
-                        g_current_state = target_thread_id;
-                        /* End of the swap agent */
-                        {
-                            /* Recompute MAC using the CFI key */
-                            asm volatile(   "movq %%r12,%%xmm5      \n"
-                                            "movq %%r13,%%xmm6      \n"   
-                                            "movlhps %%xmm5, %%xmm5 \n"
-                                            "por %%xmm6,%%xmm5     \n"  
-                                            :
-                                            :
-                                            :);
-                            memset(dec_data, 0, 16);
-
-                            encryptCBC128(global_plain_text, 16, dec_data);
-
-                            for (int k = 0; k < 16; k++){
-                                if (dec_data[k] != global_hashed_string[k]){
-                                    return SGX_ERROR_ECALL_NOT_ALLOWED;
-                                }
-                            }
-                            /* Clear r12, r13 */
-                            asm volatile(   "pxor %%xmm5,%%xmm5   \n"
-                                            "xor %%r12, %%r12     \n"   
-                                            "xor %%r13, %%r13     \n"
-                                            :
-                                            :
-                                            :);
-                        }
-                    }
-                    status = do_oret(ms);
-                }
-                else if (index ==ECALL_SCHEDULE)
-                {
-                    // There are two scenarios: 
-                    // 1. A thread was preempted and new thread running on top in this interrupted SSA
-                    // 1.1 A thread runs again in this SSA
-                    // 2. A thread finished its execution and a new thread running on top, there is still an interrupted context
-                        /* Resume a previously interrupted thread */
-                        /* We have to handle 3 types of thread here:
-                            * 1. Thread to be resumed
-                            * 2. Thread was interrupted
-                            * 3. Thread at cssa -1 
-                            */
-                    memcpy((void*)thread_data, (void*)&g_current_thread_cache->thread_data, sizeof(thread_data_t));
-                    // Recover thread on the last index 
-
-                    // Prepare CPU enclave context for previous cssa
                     memcpy(g_in_sealed_ssas, g_current_thread_cache->ssas_storage_entry, g_current_thread_cache->ciph_ssas_size);
-                    status = my_unseal_data((sgx_sealed_data_t *) g_in_sealed_ssas, NULL, NULL, (uint8_t*)g_in_tmp_ssas_buffer, &g_current_thread_cache->ssas_size);
+                    status = my_unseal_data((sgx_sealed_data_t *) g_in_sealed_ssas, NULL, NULL, 
+                                            (uint8_t*)g_in_tmp_ssas_buffer, &g_current_thread_cache->ssas_size);
                     assert(status == SGX_SUCCESS);
-                    
-                    /* Get CPU context first, then we can obtain the current stack pointer */
-                    memcpy((uint8_t*)((unsigned long) ssa_gpr & ~0xFFF), g_in_tmp_ssas_buffer, g_ssa_size);
-                    current_thread_stack = (void*)ssa_gpr->REG(sp);
-                    memcpy((uint8_t*)current_thread_stack, g_in_tmp_ssas_buffer + g_ssa_size, g_current_thread_cache->thread_stack_size);
-                    
-                    g_current_state = target_thread_id;
+                    current_thread_stack = (void*) thread_data->last_sp;
+                    memcpy(current_thread_stack, g_in_tmp_ssas_buffer, g_current_thread_cache->thread_stack_size);
+                }        
+                // for debugging purpose 
+                ocall_context_t *context = reinterpret_cast<ocall_context_t*>(thread_data->last_sp);
+                (void) context;
+                // Update thread id
+                g_current_state = target_thread_id;
+                /* End of the swap agent */
+                {
+                    /* Recompute MAC using the CFI key */
+                    asm volatile(   "movq %%r12,%%xmm5      \n"
+                                    "movq %%r13,%%xmm6      \n"   
+                                    "movlhps %%xmm5, %%xmm5 \n"
+                                    "por %%xmm6,%%xmm5     \n"  
+                                    :
+                                    :
+                                    :);
+                    memset(dec_data, 0, 16);
 
-                    /* End of the swap agent */
-                    {
-                        /* Recompute MAC using the CFI key */
-                        asm volatile(   "movq %%r12,%%xmm5      \n"
-                                        "movq %%r13,%%xmm6      \n"   
-                                        "movlhps %%xmm5, %%xmm5 \n"
-                                        "por %%xmm6,%%xmm5     \n"  
-                                        :
-                                        :
-                                        :);
-                        memset(dec_data, 0, 16);
+                    encryptCBC128(global_plain_text, 16, dec_data);
 
-                        encryptCBC128(global_plain_text, 16, dec_data);
-
-                        for (int k = 0; k < 16; k++){
-                            if (dec_data[k] != global_hashed_string[k]){
-                                return SGX_ERROR_ECALL_NOT_ALLOWED;
-                            }
+                    for (int k = 0; k < 16; k++){
+                        if (dec_data[k] != global_hashed_string[k]){
+                            return SGX_ERROR_ECALL_NOT_ALLOWED;
                         }
-                        /* Clear r12, r13 */
-                        asm volatile(   "pxor %%xmm5,%%xmm5   \n"
-                                        "xor %%r12, %%r12     \n"   
-                                        "xor %%r13, %%r13     \n"
-                                        :
-                                        :
-                                        :);
                     }
-                    sgx_exception_routine(cssa);                
+                    /* Clear r12, r13 */
+                    asm volatile(   "pxor %%xmm5,%%xmm5   \n"
+                                    "xor %%r12, %%r12     \n"   
+                                    "xor %%r13, %%r13     \n"
+                                    :
+                                    :
+                                    :);
                 }
-                else    /* Should never reach here */ 
-                    abort();   
+            }
+            status = do_oret(ms);
+        }
+        else if (index ==ECALL_SCHEDULE)
+        {
+            // There are two scenarios: 
+            // 1. A thread was preempted and new thread running on top in this interrupted SSA
+            // 1.1 A thread runs again in this SSA
+            // 2. A thread finished its execution and a new thread running on top, there is still an interrupted context
+                /* Resume a previously interrupted thread */
+                /* We have to handle 3 types of thread here:
+                    * 1. Thread to be resumed
+                    * 2. Thread was interrupted
+                    * 3. Thread at cssa -1 
+                    */
+            memcpy((void*)thread_data, (void*)&g_current_thread_cache->thread_data, sizeof(thread_data_t));
+            // Recover thread on the last index 
+
+            // Prepare CPU enclave context for previous cssa
+            memcpy(g_in_sealed_ssas, g_current_thread_cache->ssas_storage_entry, g_current_thread_cache->ciph_ssas_size);
+            status = my_unseal_data((sgx_sealed_data_t *) g_in_sealed_ssas, NULL, NULL, (uint8_t*)g_in_tmp_ssas_buffer, &g_current_thread_cache->ssas_size);
+            assert(status == SGX_SUCCESS);
+            
+            /* Get CPU context first, then we can obtain the current stack pointer */
+            memcpy((uint8_t*)((unsigned long) ssa_gpr & ~0xFFF), g_in_tmp_ssas_buffer, g_ssa_size);
+            current_thread_stack = (void*)ssa_gpr->REG(sp);
+            memcpy((uint8_t*)current_thread_stack, g_in_tmp_ssas_buffer + g_ssa_size, g_current_thread_cache->thread_stack_size);
+            
+            g_current_state = target_thread_id;
+
+            /* End of the swap agent */
+            {
+                /* Recompute MAC using the CFI key */
+                asm volatile(   "movq %%r12,%%xmm5      \n"
+                                "movq %%r13,%%xmm6      \n"   
+                                "movlhps %%xmm5, %%xmm5 \n"
+                                "por %%xmm6,%%xmm5     \n"  
+                                :
+                                :
+                                :);
+                memset(dec_data, 0, 16);
+
+                encryptCBC128(global_plain_text, 16, dec_data);
+
+                for (int k = 0; k < 16; k++){
+                    if (dec_data[k] != global_hashed_string[k]){
+                        return SGX_ERROR_ECALL_NOT_ALLOWED;
+                    }
+                }
+                /* Clear r12, r13 */
+                asm volatile(   "pxor %%xmm5,%%xmm5   \n"
+                                "xor %%r12, %%r12     \n"   
+                                "xor %%r13, %%r13     \n"
+                                :
+                                :
+                                :);
+            }
+            sgx_exception_routine(cssa);                
+        }
+        else    /* Should never reach here */ 
+            abort();   
     }
     return status;
 }

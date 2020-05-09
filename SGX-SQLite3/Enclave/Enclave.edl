@@ -1,0 +1,17 @@
+enclave {
+    from "sgx_tstdc.edl" import *;
+    include "../ocall_types.h" // Need to import some type declartions from stdlib
+    from "sgx_pthread.edl" import *;
+
+    trusted {
+        public void ecall_opendb(long tid);  // open SQLite connection to In-Memory DB
+        public void ecall_execute_sql(long tid, [in, string] const char *sql);  // execute SQL statement within enclave
+        public void ecall_closedb(long tid);  // close SQLite db connection
+    };
+
+    untrusted {
+        void ocall_println_string([in, string] const char *str);
+        void ocall_print_string([in, string] const char *str);
+        void ocall_print_error([in, string] const char *str);
+    };
+};

@@ -90,13 +90,13 @@ extern "C" int enter_enclave(int index, void *ms, void *tcs, int cssa)
 
     if(cssa == 0)
     {
-        if(index == 0) 
+        if(index == 0 || index == 1 || index == 2 || index == 3) 
         {
             // Initialize stack guard if necessary
             init_stack_guard(tcs);
             error = do_ecall(index, ms, tcs);
         }
-        else if((index >= 1) || (index == ECMD_ECALL_PTHREAD))
+        else if((index >= 4) || (index == ECMD_ECALL_PTHREAD))
         {
             if(agent_is_initialized == 0)
                 agent_is_initialized = 1;
@@ -110,8 +110,14 @@ extern "C" int enter_enclave(int index, void *ms, void *tcs, int cssa)
         else if(index == ECMD_ORET)
         {
             /* if the swap agent is initialized, then redirect OCALL back to the agent */
-            if(agent_is_initialized)    error = trts_swap_agent_handle_exception(tcs, index, ms, cssa);
-            else    error = do_oret(ms);
+            // if(agent_is_initialized)
+            // {
+            //     error = trts_swap_agent_handle_exception(tcs, index, ms, cssa);
+            // }    
+            // else    
+            {
+                error = do_oret(ms);
+            }
         }
         else if(index == ECMD_MKTCS)
         {

@@ -56,13 +56,13 @@ sgx_tcrypto.h
 epid_pve_type.h
 ../../../inc/internal/epid_pve_type.h
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.c
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.c
 pce_u.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.h
 errno.h
 -
 
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_u.h
 stdint.h
 -
 wchar.h
@@ -72,11 +72,11 @@ stddef.h
 string.h
 -
 sgx_edger8r.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/sgx_edger8r.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/sgx_edger8r.h
 pce_cert.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_cert.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/pce_cert.h
 sgx_report.h
-/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/sgx_report.h
+/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/pce_service_bundle/sgx_report.h
 stdlib.h
 -
 

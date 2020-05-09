@@ -1,26 +1,26 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp
+Change Dir: /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4b025/fast"
-make[4]: Entering directory '/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_4b025.dir/build.make CMakeFiles/cmTC_4b025.dir/build
-make[5]: Entering directory '/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4b025.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_4b025.dir/CheckSymbolExists.c.o   -c /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_4b025
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b025.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4b025.dir/CheckSymbolExists.c.o  -o cmTC_4b025 
-CMakeFiles/cmTC_4b025.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_40b05/fast"
+make[4]: Entering directory '/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_40b05.dir/build.make CMakeFiles/cmTC_40b05.dir/build
+make[5]: Entering directory '/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_40b05.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_40b05.dir/CheckSymbolExists.c.o   -c /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_40b05
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40b05.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_40b05.dir/CheckSymbolExists.c.o  -o cmTC_40b05 
+CMakeFiles/cmTC_40b05.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_4b025.dir/build.make:97: recipe for target 'cmTC_4b025' failed
-make[5]: *** [cmTC_4b025] Error 1
-make[5]: Leaving directory '/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_4b025/fast' failed
-make[4]: *** [cmTC_4b025/fast] Error 2
-make[4]: Leaving directory '/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
+CMakeFiles/cmTC_40b05.dir/build.make:97: recipe for target 'cmTC_40b05' failed
+make[5]: *** [cmTC_40b05] Error 1
+make[5]: Leaving directory '/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_40b05/fast' failed
+make[4]: *** [cmTC_40b05/fast] Error 2
+make[4]: Leaving directory '/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
 
-File /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -36,24 +36,24 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp
+Change Dir: /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8cf0e/fast"
-make[4]: Entering directory '/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_8cf0e.dir/build.make CMakeFiles/cmTC_8cf0e.dir/build
-make[5]: Entering directory '/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8cf0e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8cf0e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_8cf0e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cf0e.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_8cf0e.dir/CheckFunctionExists.c.o  -o cmTC_8cf0e -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_08eaf/fast"
+make[4]: Entering directory '/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_08eaf.dir/build.make CMakeFiles/cmTC_08eaf.dir/build
+make[5]: Entering directory '/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_08eaf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_08eaf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_08eaf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08eaf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_08eaf.dir/CheckFunctionExists.c.o  -o cmTC_08eaf -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_8cf0e.dir/build.make:97: recipe for target 'cmTC_8cf0e' failed
-make[5]: *** [cmTC_8cf0e] Error 1
-make[5]: Leaving directory '/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_8cf0e/fast' failed
-make[4]: *** [cmTC_8cf0e/fast] Error 2
-make[4]: Leaving directory '/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
+CMakeFiles/cmTC_08eaf.dir/build.make:97: recipe for target 'cmTC_08eaf' failed
+make[5]: *** [cmTC_08eaf] Error 1
+make[5]: Leaving directory '/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_08eaf/fast' failed
+make[4]: *** [cmTC_08eaf/fast] Error 2
+make[4]: Leaving directory '/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles/CMakeTmp'
 
 

@@ -9,12 +9,12 @@ sudo /opt/intel/sgxdriver/uninstall.sh
 sudo /opt/intel/sgxsdk/uninstall.sh
 
 #navigate to driver folder
-cd /home/lala/Desktop/sgx_thread_isolation/
+cd /home/lala/Desktop/sqlite_thread_isolation/
 sudo ./sgx_linux_x64_driver_2.6.0_51c4821.bin
 cd sgxv2.8/
 #install sdk
 sudo make clean
-sudo chown -R lala /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/sdk/cpprt/
+sudo chown -R lala /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/sdk/cpprt/
 sudo chown -R lala linux/installer/common/sdk/pkgconfig/x64/
 make -j12 sdk_install_pkg DEBUG=1
 sudo ./linux/installer/bin/sgx_linux_x64_sdk_2.8.100.3.bin  

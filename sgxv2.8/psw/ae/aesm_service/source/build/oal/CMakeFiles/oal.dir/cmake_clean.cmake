@@ -6,9 +6,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/oal.dir/linux/internal_log.cpp.o"
   "CMakeFiles/oal.dir/linux/oal_power.cpp.o"
   "CMakeFiles/oal.dir/linux/persistent_storage_table.cpp.o"
-  "CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_thread.c.o"
-  "CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_trace.c.o"
-  "CMakeFiles/oal.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/common/src/se_time.c.o"
+  "CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_thread.c.o"
+  "CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_trace.c.o"
+  "CMakeFiles/oal.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/common/src/se_time.c.o"
   "../bin/liboal.pdb"
   "../bin/liboal.so"
 )

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
+CMAKE_SOURCE_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
+CMAKE_BINARY_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/progress.marks
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles 0
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/qcnl/CMakeFiles/progress.marks
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/clean
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/preinstall
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/preinstall
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/rule:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/rule
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/rule
 .PHONY : qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/rule
 
 # Convenience name for target.
@@ -122,89 +122,89 @@ sgx_default_qcnl_wrapper: qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/rule
 
 # fast build rule for target.
 sgx_default_qcnl_wrapper/fast:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build
 .PHONY : sgx_default_qcnl_wrapper/fast
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.o
-
-# target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.i
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.i
-
-# target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.i
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.s
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.s
-
-# target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.s
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.o
 
 # target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.o
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.i
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.i
 
 # target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.i
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.s
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.s
 
 # target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.cpp.s
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.o
 
 # target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.o
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.i
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.i
 
 # target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.i
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.s
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.s
 
 # target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.cpp.s
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.o
+
+# target to build an object file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.o
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.i
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.i
+
+# target to preprocess a source file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.i
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.s
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.s
+
+# target to generate assembly for a file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/build.make qcnl/CMakeFiles/sgx_default_qcnl_wrapper.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.cpp.s
 
 # Help Target
 help:
@@ -215,15 +215,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... sgx_default_qcnl_wrapper"
 	@echo "... edit_cache"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.s"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.s"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/config.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/linux/network_wrapper.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/qcnl/sgx_default_qcnl_wrapper.s"
 .PHONY : help
 
 
@@ -235,6 +235,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

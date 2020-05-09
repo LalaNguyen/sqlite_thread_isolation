@@ -7,8 +7,8 @@ bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/qe3
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/common/inc/sgx_quote_3.h
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/common/inc/user_types.h
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/quote/inc/ecdsa_quote.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/qe3_u.c
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/qe3_u.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/qe3_u.c
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/qe3_u.h
  /opt/intel/sgxsdk/include/sgx.h
  /opt/intel/sgxsdk/include/sgx_attributes.h
  /opt/intel/sgxsdk/include/sgx_defs.h
@@ -68,27 +68,27 @@ bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecd
  ../interfaces/quote_ex_service.h
  ../interfaces/quote_provider_service.h
  ../interfaces/service.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/Any.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/AnyMap.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/Bundle.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleActivator.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleContext.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleInitialization.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleVersion.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/FrameworkConfig.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/FrameworkExport.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GetBundleContext.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GlobalConfig.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ListenerFunctors.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ListenerToken.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceException.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceInterface.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceProperties.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceReference.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceReferenceBase.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceRegistration.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceRegistrationBase.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/ecdsa_quote_service_bundle/ecdsa_quote_service_bundle.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/Any.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/AnyMap.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/Bundle.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleActivator.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleContext.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleInitialization.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleVersion.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/FrameworkConfig.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/FrameworkExport.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GetBundleContext.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GlobalConfig.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ListenerFunctors.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ListenerToken.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceException.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceInterface.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceProperties.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceReference.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceReferenceBase.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceRegistration.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/ServiceRegistrationBase.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/bundles/ecdsa_quote_service_bundle/ecdsa_quote_service_bundle.cpp
  /opt/intel/sgxsdk/include/sgx.h
  /opt/intel/sgxsdk/include/sgx_attributes.h
  /opt/intel/sgxsdk/include/sgx_defs.h
@@ -100,12 +100,12 @@ bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecd
  /opt/intel/sgxsdk/include/sgx_tcrypto.h
  /opt/intel/sgxsdk/include/sgx_urts.h
 bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_init.cpp.o
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleInitialization.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GlobalConfig.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/ecdsa_quote_service_bundle/cppmicroservices_init.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/BundleInitialization.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/CppMicroServices/local-install/include/cppmicroservices4/cppmicroservices/GlobalConfig.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/ecdsa_quote_service_bundle/cppmicroservices_init.cpp
 bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.o
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp
-bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp
+bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o
  ../../../../../common/inc/internal/se_thread.h
  ../../../../../common/inc/internal/se_trace.h
  ../../../../../external/dcap_source/QuoteGeneration/pce_wrapper/inc/sgx_pce.h
@@ -116,8 +116,8 @@ bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/hom
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/common/inc/user_types.h
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/quote/enclave/qe3.h
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/quote/inc/ecdsa_quote.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.h
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.h
  /opt/intel/sgxsdk/include/sgx.h
  /opt/intel/sgxsdk/include/sgx_attributes.h
  /opt/intel/sgxsdk/include/sgx_defs.h
@@ -131,7 +131,7 @@ bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/hom
  /opt/intel/sgxsdk/include/sgx_tseal.h
  /opt/intel/sgxsdk/include/sgx_urts.h
  bundles/ecdsa_quote_service_bundle/qe3_u.h
-bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o
+bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o
  ../../../../../common/inc/internal/se_trace.h
  ../../../../../external/dcap_source/QuoteGeneration/pce_wrapper/inc/sgx_pce.h
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/common/inc/sgx_ql_ecdsa_quote.h
@@ -142,7 +142,7 @@ bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/hom
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/quote/enclave/qe3.h
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/quote/inc/ecdsa_quote.h
  ../../../../../external/dcap_source/QuoteGeneration/quote_wrapper/quote/inc/sgx_ql_core_wrapper.h
- /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp
+ /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp
  /opt/intel/sgxsdk/include/sgx.h
  /opt/intel/sgxsdk/include/sgx_attributes.h
  /opt/intel/sgxsdk/include/sgx_defs.h

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
+CMAKE_SOURCE_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
+CMAKE_BINARY_DIR = /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/CMakeFiles/progress.marks
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles 0
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/bundles/ecdsa_quote_service_bundle/CMakeFiles/progress.marks
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/clean
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/preinstall
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/preinstall
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/rule:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/rule
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f CMakeFiles/Makefile2 bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/rule
 .PHONY : bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ ecdsa_quote_service_bundle: bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_
 
 # fast build rule for target.
 ecdsa_quote_service_bundle/fast:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build
 .PHONY : ecdsa_quote_service_bundle/fast
 
 ecdsa_quote_service_bundle.o: ecdsa_quote_service_bundle.cpp.o
@@ -131,7 +131,7 @@ ecdsa_quote_service_bundle.o: ecdsa_quote_service_bundle.cpp.o
 
 # target to build an object file
 ecdsa_quote_service_bundle.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle.cpp.o
 .PHONY : ecdsa_quote_service_bundle.cpp.o
 
 ecdsa_quote_service_bundle.i: ecdsa_quote_service_bundle.cpp.i
@@ -140,7 +140,7 @@ ecdsa_quote_service_bundle.i: ecdsa_quote_service_bundle.cpp.i
 
 # target to preprocess a source file
 ecdsa_quote_service_bundle.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle.cpp.i
 .PHONY : ecdsa_quote_service_bundle.cpp.i
 
 ecdsa_quote_service_bundle.s: ecdsa_quote_service_bundle.cpp.s
@@ -149,7 +149,7 @@ ecdsa_quote_service_bundle.s: ecdsa_quote_service_bundle.cpp.s
 
 # target to generate assembly for a file
 ecdsa_quote_service_bundle.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle.cpp.s
 .PHONY : ecdsa_quote_service_bundle.cpp.s
 
 ecdsa_quote_service_bundle/cppmicroservices_init.o: ecdsa_quote_service_bundle/cppmicroservices_init.cpp.o
@@ -158,7 +158,7 @@ ecdsa_quote_service_bundle/cppmicroservices_init.o: ecdsa_quote_service_bundle/c
 
 # target to build an object file
 ecdsa_quote_service_bundle/cppmicroservices_init.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_init.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_init.cpp.o
 .PHONY : ecdsa_quote_service_bundle/cppmicroservices_init.cpp.o
 
 ecdsa_quote_service_bundle/cppmicroservices_init.i: ecdsa_quote_service_bundle/cppmicroservices_init.cpp.i
@@ -167,7 +167,7 @@ ecdsa_quote_service_bundle/cppmicroservices_init.i: ecdsa_quote_service_bundle/c
 
 # target to preprocess a source file
 ecdsa_quote_service_bundle/cppmicroservices_init.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_init.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_init.cpp.i
 .PHONY : ecdsa_quote_service_bundle/cppmicroservices_init.cpp.i
 
 ecdsa_quote_service_bundle/cppmicroservices_init.s: ecdsa_quote_service_bundle/cppmicroservices_init.cpp.s
@@ -176,7 +176,7 @@ ecdsa_quote_service_bundle/cppmicroservices_init.s: ecdsa_quote_service_bundle/c
 
 # target to generate assembly for a file
 ecdsa_quote_service_bundle/cppmicroservices_init.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_init.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_init.cpp.s
 .PHONY : ecdsa_quote_service_bundle/cppmicroservices_init.cpp.s
 
 ecdsa_quote_service_bundle/cppmicroservices_resources.o: ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.o
@@ -185,7 +185,7 @@ ecdsa_quote_service_bundle/cppmicroservices_resources.o: ecdsa_quote_service_bun
 
 # target to build an object file
 ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.o
 .PHONY : ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.o
 
 ecdsa_quote_service_bundle/cppmicroservices_resources.i: ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.i
@@ -194,7 +194,7 @@ ecdsa_quote_service_bundle/cppmicroservices_resources.i: ecdsa_quote_service_bun
 
 # target to preprocess a source file
 ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.i
 .PHONY : ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.i
 
 ecdsa_quote_service_bundle/cppmicroservices_resources.s: ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.s
@@ -203,62 +203,62 @@ ecdsa_quote_service_bundle/cppmicroservices_resources.s: ecdsa_quote_service_bun
 
 # target to generate assembly for a file
 ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.s
 .PHONY : ecdsa_quote_service_bundle/cppmicroservices_resources.cpp.s
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.o
-
-# target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.i
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.i
-
-# target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.i
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.s
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.s
-
-# target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.s
-
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.o: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o
-
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.o
 
 # target to build an object file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.o
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.i: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.i
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.i
 
 # target to preprocess a source file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.i
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.i
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.i
 
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.s: home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.s
 
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.s
 
 # target to generate assembly for a file
-home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.s
-.PHONY : home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.s
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.cpp.s
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.o: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.o
+
+# target to build an object file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.o
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.i: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.i
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.i
+
+# target to preprocess a source file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.i:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.i
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.i
+
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.s: home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.s
+
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.s
+
+# target to generate assembly for a file
+home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.s:
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.s
+.PHONY : home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.cpp.s
 
 qe3_u.o: qe3_u.c.o
 
@@ -266,7 +266,7 @@ qe3_u.o: qe3_u.c.o
 
 # target to build an object file
 qe3_u.c.o:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/qe3_u.c.o
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/qe3_u.c.o
 .PHONY : qe3_u.c.o
 
 qe3_u.i: qe3_u.c.i
@@ -275,7 +275,7 @@ qe3_u.i: qe3_u.c.i
 
 # target to preprocess a source file
 qe3_u.c.i:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/qe3_u.c.i
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/qe3_u.c.i
 .PHONY : qe3_u.c.i
 
 qe3_u.s: qe3_u.c.s
@@ -284,7 +284,7 @@ qe3_u.s: qe3_u.c.s
 
 # target to generate assembly for a file
 qe3_u.c.s:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/qe3_u.c.s
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(MAKE) -f bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/build.make bundles/ecdsa_quote_service_bundle/CMakeFiles/ecdsa_quote_service_bundle.dir/qe3_u.c.s
 .PHONY : qe3_u.c.s
 
 # Help Target
@@ -305,12 +305,12 @@ help:
 	@echo "... ecdsa_quote_service_bundle/cppmicroservices_resources.o"
 	@echo "... ecdsa_quote_service_bundle/cppmicroservices_resources.i"
 	@echo "... ecdsa_quote_service_bundle/cppmicroservices_resources.s"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.s"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.o"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.i"
-	@echo "... home/lala/Desktop/sgx_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/qe_logic.s"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.o"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.i"
+	@echo "... home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/external/dcap_source/QuoteGeneration/quote_wrapper/quote/sgx_ql_core_wrapper.s"
 	@echo "... qe3_u.o"
 	@echo "... qe3_u.i"
 	@echo "... qe3_u.s"
@@ -325,6 +325,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lala/Desktop/sgx_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lala/Desktop/sqlite_thread_isolation/sgxv2.8/psw/ae/aesm_service/source/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
